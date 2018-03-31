@@ -6,9 +6,6 @@
 # dependencies
 /node_modules
 
-# ios
-ios/build
-
 # android
 android/.gradle
 
