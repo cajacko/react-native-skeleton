@@ -6,9 +6,6 @@
 # dependencies
 /node_modules
 
-# android
-android/.gradle
-
 # misc
 .env.local
 .env.development.local
