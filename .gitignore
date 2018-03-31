@@ -6,6 +6,12 @@
 # dependencies
 /node_modules
 
+# ios
+ios/build
+
+# android
+android/.gradle
+
 # misc
 .env.local
 .env.development.local
