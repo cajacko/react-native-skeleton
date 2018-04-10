@@ -1,0 +1,75 @@
+{
+  "extends": ["airbnb"],
+  "rules": {
+    "flowtype/define-flow-type": 1,
+    "flowtype/use-flow-type": 1,
+    "flowtype/require-valid-file-annotation": ["warn", "always"],
+    "no-warning-comments": ["error", { "location": "anywhere" }],
+    "import/prefer-default-export": "off",
+    "valid-jsdoc": "error",
+    "require-jsdoc": [
+      "warn",
+      {
+        "require": {
+          "FunctionDeclaration": true,
+          "MethodDefinition": true,
+          "ClassDeclaration": true,
+          "ArrowFunctionExpression": true
+        }
+      }
+    ],
+    "max-lines": [
+      "error",
+      {
+        "max": 150,
+        "skipBlankLines": true,
+        "skipComments": true
+      }
+    ],
+    "max-len": [
+      "error",
+      {
+        "code": 80,
+        "ignoreStrings": true,
+        "ignoreUrls": true,
+        "ignoreRegExpLiterals": true,
+        "ignoreTemplateLiterals": true
+      }
+    ],
+    "import/no-extraneous-dependencies": [
+      "error",
+      {
+        "devDependencies": true,
+        "optionalDependencies": true,
+        "peerDependencies": true
+      }
+    ],
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+    "class-methods-use-this": "off"
+  },
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "extensions": [".js", ".ios.js", ".android.js"]
+      }
+    }
+  },
+  "parser": "babel-eslint",
+  "plugins": ["jest", "flowtype"],
+  "env": {
+    "jest/globals": true
+  },
+  "globals": {
+    "document": true,
+    "window": true
+  },
+  "overrides": [
+    {
+      "files": ["**/__mocks__/**/*", "**/__tests__/**/*", "**/*.test.*"],
+      "rules": {
+        "flowtype/require-valid-file-annotation": ["off"],
+        "require-jsdoc": ["off"]
+      }
+    }
+  ]
+}

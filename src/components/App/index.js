@@ -1,1 +1,3 @@
-export { default } from "./App.render";
+// @flow
+
+export { default } from './App.render';
