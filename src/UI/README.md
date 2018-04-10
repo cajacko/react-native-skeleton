@@ -1,0 +1,3 @@
+# UI Folder
+
+UI Components are components generic enough to not belong to a module. They are components that you could keep in an open source lib, because they don’t have any business logic from the specific application. Examples of those components are: Buttons, Inputs, Checkboxes, Selects, Modals, Data display elements, etc…
