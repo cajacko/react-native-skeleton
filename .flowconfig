@@ -37,6 +37,30 @@
 <PROJECT_ROOT>/node_modules/reqwest/.*
 <PROJECT_ROOT>/node_modules/metro-bundler/.*
 
+; Specific node_module files that are causing errors
+<PROJECT_ROOT>/node_modules/react-native/Libraries/StyleSheet/flattenStyle.js
+<PROJECT_ROOT>/node_modules/react-native/Libraries/StyleSheet/StyleSheetPropType.js
+<PROJECT_ROOT>/node_modules/react-native/Libraries/StyleSheet/StyleSheet.js
+<PROJECT_ROOT>/node_modules/react-native/Libraries/ReactNative/requireNativeComponent.js
+<PROJECT_ROOT>/node_modules/react-native/Libraries/ReactNative/renderApplication.js
+<PROJECT_ROOT>/node_modules/react-native/Libraries/ReactNative/YellowBox.js
+<PROJECT_ROOT>/node_modules/react-native/Libraries/Lists/VirtualizedSectionList.js
+<PROJECT_ROOT>/node_modules/react-native/Libraries/Lists/ViewabilityHelper.js
+<PROJECT_ROOT>/node_modules/react-native/Libraries/Lists/SectionList.js
+<PROJECT_ROOT>/node_modules/react-native/Libraries/Lists/FlatList.js
+<PROJECT_ROOT>/node_modules/react-native/Libraries/Interaction/InteractionManager.js
+<PROJECT_ROOT>/node_modules/react-native/Libraries/Inspector/Inspector.js
+<PROJECT_ROOT>/node_modules/react-native/Libraries/Inspector/ElementProperties.js
+<PROJECT_ROOT>/node_modules/react-native/Libraries/Lists/VirtualizedList.js
+<PROJECT_ROOT>/node_modules/react-native/Libraries/Interaction/Batchinator.js
+<PROJECT_ROOT>/node_modules/react-native/Libraries/RCTTest/SnapshotViewIOS.ios.js
+<PROJECT_ROOT>/node_modules/react-native/Libraries/Modal/Modal.js
+<PROJECT_ROOT>/node_modules/react-native/Libraries/react-native/react-native-implementation.js
+<PROJECT_ROOT>/node_modules/react-native/Libraries/Text/Text.js
+<PROJECT_ROOT>/node_modules/react-native/Libraries/ReactNative/AppRegistry.js
+<PROJECT_ROOT>/node_modules/react-native/Libraries/Image/ImageBackground.js
+<PROJECT_ROOT>/node_modules/react-native/Libraries/Image/Image.ios.js
+
 [include]
 
 [libs]
@@ -68,8 +92,3 @@ suppress_comment=\\(.\\|\n\\)*\\$FlowFixMe\\($\\|[^(]\\|(\\(>=0\\.\\(5[0-6]\\|[1
 suppress_comment=\\(.\\|\n\\)*\\$FlowIssue\\((\\(>=0\\.\\(5[0-6]\\|[1-4][0-9]\\|[0-9]\\).[0-9]\\)? *\\(site=[a-z,_]*react_native_oss[a-z,_]*\\)?)\\)?:? #[0-9]+
 suppress_comment=\\(.\\|\n\\)*\\$FlowFixedInNextDeploy
 suppress_comment=\\(.\\|\n\\)*\\$FlowExpectedError
-
-unsafe.enable_getters_and_setters=true
-
-[version]
-^0.56.0

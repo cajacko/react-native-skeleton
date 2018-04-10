@@ -6,19 +6,29 @@
     "start": "react-native start",
     "android": "react-native run-android",
     "ios": "react-native run-ios",
-    "test": "jest",
+    "test": "yarn test:lint && yarn test:flow && test:jest",
     "test:lint": "eslint --ext .js,.jsx src",
+    "test:flow": "flow",
+    "test:jest": "jest --coverage",
     "precommit": "lint-staged"
   },
   "jest": {
     "preset": "react-native"
+  },
+  "lint-staged": {
+    "*.js": ["prettier-eslint --write", "git add"],
+    "*.jsx": ["prettier-eslint --write", "git add"],
+    "*.md": ["prettier-eslint --write", "git add"],
+    "*.json": ["prettier-eslint --write", "git add"]
   },
   "dependencies": {
     "react": "16.3.0-alpha.1",
     "react-native": "0.54.0"
   },
   "devDependencies": {
+    "babel-cli": "^6.26.0",
     "babel-eslint": "^8.2.2",
+    "babel-preset-flow": "^6.23.0",
     "babel-preset-react-native-stage-0": "^1.0.1",
     "eslint": "^4.19.1",
     "eslint-config-airbnb": "^16.1.0",
@@ -27,9 +37,11 @@
     "eslint-plugin-jest": "^21.15.0",
     "eslint-plugin-jsx-a11y": "^6.0.3",
     "eslint-plugin-react": "^7.7.0",
+    "flow-bin": "^0.69.0",
     "husky": "^0.14.3",
     "jest": "^22.4.3",
     "jest-react-native": "^18.0.0",
+    "lint-staged": "^7.0.4",
     "prettier-eslint-cli": "^4.7.1",
     "react-test-renderer": "16.3.0-alpha.1"
   }
