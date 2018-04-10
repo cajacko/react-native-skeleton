@@ -10,10 +10,20 @@
     "test:lint": "eslint --ext .js,.jsx src",
     "test:flow": "flow",
     "test:jest": "jest --coverage",
+    "test:watch": "jest --coverage --watch",
     "precommit": "lint-staged"
   },
   "jest": {
-    "preset": "react-native"
+    "preset": "react-native",
+    "coveragePathIgnorePatterns": ["/node_modules/", "/jest/", "/__mocks__/"],
+    "coverageThreshold": {
+      "global": {
+        "statements": 100,
+        "branches": 100,
+        "functions": 100,
+        "lines": 100
+      }
+    }
   },
   "lint-staged": {
     "*.js": ["prettier-eslint --write", "git add"],
@@ -23,7 +33,8 @@
   },
   "dependencies": {
     "react": "16.3.0-alpha.1",
-    "react-native": "0.54.0"
+    "react-native": "0.54.0",
+    "styled-components": "^3.2.5"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
@@ -41,8 +52,9 @@
     "husky": "^0.14.3",
     "jest": "^22.4.3",
     "jest-react-native": "^18.0.0",
+    "jest-styled-components": "^5.0.1",
     "lint-staged": "^7.0.4",
     "prettier-eslint-cli": "^4.7.1",
-    "react-test-renderer": "16.3.0-alpha.1"
+    "react-test-renderer": "^16.3.1"
   }
 }
