@@ -1,4 +1,6 @@
-const { device, element, by } = require('detox');
+const {
+  device, element, by, expect,
+} = require('detox');
 const { When, Then } = require('cucumber');
 
 When('the app is reloaded', () => device.reloadReactNative());
