@@ -23,7 +23,8 @@
         "binaryPath":
           "ios/build/Build/Products/Debug-iphonesimulator/reactnativeskeleton.app",
         "type": "ios.simulator",
-        "name": "iPhone 7"
+        "name": "iPhone 7",
+        "build": "yarn ios"
       }
     }
   },

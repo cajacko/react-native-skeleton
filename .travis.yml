@@ -26,6 +26,10 @@ install:
 - yarn
 
 script:
+- yarn test:lint
+- yarn test:jsdoc
+- yarn test:flow
+- yarn test:jest
 # - detox build --configuration ios.sim.release
 # - detox test --configuration ios.sim.release --cleanup
-- yarn test:lint
+# - yarn test:features
