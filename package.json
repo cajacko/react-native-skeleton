@@ -7,13 +7,14 @@
     "android": "react-native run-android",
     "ios": "react-native run-ios",
     "test":
-      "yarn test:lint && yarn test:flow && test:jest && yarn test:features",
+      "yarn test:lint && && yarn test:jsdoc && yarn test:flow && test:jest && yarn test:features",
     "test:lint": "eslint --ext .js,.jsx src",
     "test:flow": "flow",
     "test:jest": "jest src --coverage",
     "test:watch": "jest src --coverage --watch",
     "test:features": "./node_modules/.bin/cucumber-js",
     "test:featuresdebug": "./node_modules/.bin/cucumber-js --tags debug",
+    "test:jsdoc": "jsdoc src -r -d docs -c jsdoc.json",
     "precommit": "lint-staged"
   },
   "detox": {
@@ -68,6 +69,7 @@
     "jest": "^22.4.3",
     "jest-react-native": "^18.0.0",
     "jest-styled-components": "^5.0.1",
+    "jsdoc": "^3.5.5",
     "lint-staged": "^7.0.4",
     "prettier-eslint-cli": "^4.7.1",
     "react-test-renderer": "^16.3.1"
