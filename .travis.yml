@@ -27,6 +27,6 @@ script:
 - yarn test:jsdoc
 - yarn test:flow
 - yarn test:jest
-- detox build --configuration ios.sim.release
+- detox build --configuration ios.sim
 # - detox test --configuration ios.sim.release --cleanup
 - yarn test:features
