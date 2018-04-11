@@ -60,6 +60,7 @@
 <PROJECT_ROOT>/node_modules/react-native/Libraries/ReactNative/AppRegistry.js
 <PROJECT_ROOT>/node_modules/react-native/Libraries/Image/ImageBackground.js
 <PROJECT_ROOT>/node_modules/react-native/Libraries/Image/Image.ios.js
+<PROJECT_ROOT>/node_modules/child-process-async/child-process-async.js
 
 [include]
 
