@@ -1,6 +1,8 @@
 const { Then } = require('cucumber');
 const { exec } = require('child-process-async');
 const { ensureFile, exists, move } = require('fs-extra');
+const looksSame = require('looks-same');
+const Jimp = require('jimp');
 
 function getScreenshotPaths(fileName) {
   const toPath = string =>
@@ -25,8 +27,44 @@ function getExistingScreenshot(fullPath) {
   return exists(fullPath);
 }
 
-function getIsDiff() {
-  return Promise.resolve(false);
+function getImageBufferForDiff(imgPath) {
+  // Adjust until can't see the status bar. As the time and battery on it
+  // makes the screenshot tests always fail
+  const offset = 30;
+
+  return new Promise((resolve, reject) =>
+    Jimp.read(imgPath).then(image =>
+      image
+        .crop(0, offset, image.bitmap.width, image.bitmap.height - offset)
+        .getBuffer('image/png', (err, buffer) => {
+          if (err) {
+            reject(err);
+          } else {
+            // Use this to check the status bar is not visible
+            // image.write(`tmp/${imgPath}`);
+            resolve(buffer);
+          }
+        })));
+}
+
+function getImageBuffersForDiff(originalScreenshot, newScreenshot) {
+  return Promise.all([
+    getImageBufferForDiff(originalScreenshot),
+    getImageBufferForDiff(newScreenshot),
+  ]);
+}
+
+function getIsDiff(originalScreenshot, newScreenshot) {
+  return getImageBuffersForDiff(originalScreenshot, newScreenshot).then(([originalImg, newImg]) =>
+    new Promise((resolve, reject) => {
+      looksSame(originalImg, newImg, (err, equal) => {
+        if (err) {
+          reject(err);
+        } else {
+          resolve(!equal);
+        }
+      });
+    }));
 }
 
 function compareAndOverwrite(fullPath) {
