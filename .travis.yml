@@ -6,8 +6,10 @@ branches:
   only:
   - master
 
-cache: 
-  yarn: true
+cache:
+  directories:
+    - $HOME/.cache/yarn
+    - $HOME/react-native-skeleton/ios/build
 
 install:
 - brew tap wix/brew
