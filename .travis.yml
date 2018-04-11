@@ -9,7 +9,8 @@ branches:
 cache:
   directories:
     - $HOME/.cache/yarn
-    - $HOME/react-native-skeleton/ios/build
+    - ios/build
+    - node_modules
 
 install:
 - brew tap wix/brew
