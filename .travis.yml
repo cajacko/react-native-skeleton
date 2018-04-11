@@ -22,9 +22,10 @@ install:
 
 # - npm install -g react-native-cli
 # - npm install -g detox-cli
-- npm install
+- npm install -g yarn
+- yarn
 
 script:
 # - detox build --configuration ios.sim.release
 # - detox test --configuration ios.sim.release --cleanup
-- npm run test:lint
+- yarn test:lint
