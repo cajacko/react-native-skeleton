@@ -1,4 +1,4 @@
-const { AfterAll, BeforeAll } = require('cucumber');
+const { AfterAll, BeforeAll, Before } = require('cucumber');
 const detox = require('detox');
 const packageJSON = require('../../package.json');
 
@@ -20,3 +20,16 @@ BeforeAll({ timeout: 60 * 1000 }, () => {
 });
 
 AfterAll(() => detox.cleanup());
+
+Before((scenario) => {
+  let feature = scenario.sourceLocation.uri;
+  feature = feature.replace('features/', '');
+  feature = feature.replace('.feature', '');
+
+  global.scenario = scenario;
+
+  global.feature = {
+    name: feature,
+    uri: scenario.sourceLocation.uri,
+  };
+});
