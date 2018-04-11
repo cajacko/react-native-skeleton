@@ -28,4 +28,4 @@ script:
 - yarn test:flow
 - yarn test:jest
 - detox build --configuration ios.sim.release
-- yarn test:features
+- yarn test:featuresrelease
