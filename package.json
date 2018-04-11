@@ -19,12 +19,13 @@
   },
   "detox": {
     "configurations": {
-      "ios.sim": {
+      "ios.sim.release": {
         "binaryPath":
-          "ios/build/Build/Products/Debug-iphonesimulator/reactnativeskeleton.app",
+          "ios/build/Build/Products/Release-iphonesimulator/reactnativeskeleton.app",
         "type": "ios.simulator",
         "name": "iPhone 7",
-        "build": "yarn ios"
+        "build":
+          "xcodebuild -project ios/reactnativeskeleton.xcodeproj -scheme reactnativeskeleton -configuration Release -sdk iphonesimulator -derivedDataPath ios/build"
       }
     }
   },
