@@ -18,8 +18,6 @@ install:
 - export NVM_DIR="$HOME/.nvm" && [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
 - nvm install
 - nvm use
-
-# - npm install -g react-native-cli
 - npm install -g detox-cli
 - npm install -g yarn
 - yarn
@@ -30,5 +28,4 @@ script:
 - yarn test:flow
 - yarn test:jest
 - detox build --configuration ios.sim.release
-# - detox test --configuration ios.sim.release --cleanup
 - yarn test:features
