@@ -14,11 +14,19 @@
     "test:watch": "jest src --coverage --watch",
     "test:features": "./node_modules/.bin/cucumber-js",
     "test:featuresdebug": "./node_modules/.bin/cucumber-js --tags debug",
+    "test:featuresrelease": "./node_modules/.bin/cucumber-js",
     "test:jsdoc": "jsdoc src -r -d docs -c jsdoc.json",
     "precommit": "lint-staged"
   },
   "detox": {
     "configurations": {
+      "ios.sim": {
+        "binaryPath":
+          "ios/build/Build/Products/Debug-iphonesimulator/reactnativeskeleton.app",
+        "type": "ios.simulator",
+        "name": "iPhone 7",
+        "build": "yarn ios"
+      },
       "ios.sim.release": {
         "binaryPath":
           "ios/build/Build/Products/Release-iphonesimulator/reactnativeskeleton.app",
