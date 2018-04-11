@@ -6,12 +6,25 @@
     "start": "react-native start",
     "android": "react-native run-android",
     "ios": "react-native run-ios",
-    "test": "yarn test:lint && yarn test:flow && test:jest",
+    "test":
+      "yarn test:lint && yarn test:flow && test:jest && yarn test:features",
     "test:lint": "eslint --ext .js,.jsx src",
     "test:flow": "flow",
-    "test:jest": "jest --coverage",
-    "test:watch": "jest --coverage --watch",
+    "test:jest": "jest src --coverage",
+    "test:watch": "jest src --coverage --watch",
+    "test:features": "./node_modules/.bin/cucumber-js",
+    "test:featuresdebug": "./node_modules/.bin/cucumber-js --tags debug",
     "precommit": "lint-staged"
+  },
+  "detox": {
+    "configurations": {
+      "ios.sim": {
+        "binaryPath":
+          "ios/build/Build/Products/Debug-iphonesimulator/reactnativeskeleton.app",
+        "type": "ios.simulator",
+        "name": "iPhone X"
+      }
+    }
   },
   "jest": {
     "preset": "react-native",
@@ -41,6 +54,8 @@
     "babel-eslint": "^8.2.2",
     "babel-preset-flow": "^6.23.0",
     "babel-preset-react-native-stage-0": "^1.0.1",
+    "cucumber": "^4.2.1",
+    "detox": "^7.3.3",
     "eslint": "^4.19.1",
     "eslint-config-airbnb": "^16.1.0",
     "eslint-plugin-flowtype": "^2.46.1",

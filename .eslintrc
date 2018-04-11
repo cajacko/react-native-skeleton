@@ -65,7 +65,13 @@
   },
   "overrides": [
     {
-      "files": ["**/__mocks__/**/*", "**/__tests__/**/*", "**/*.test.*"],
+      "files": [
+        "**/__mocks__/**/*",
+        "**/__tests__/**/*",
+        "**/*.test.*",
+        "**/jest/**/*",
+        "**/features/**/*"
+      ],
       "rules": {
         "flowtype/require-valid-file-annotation": ["off"],
         "require-jsdoc": ["off"]

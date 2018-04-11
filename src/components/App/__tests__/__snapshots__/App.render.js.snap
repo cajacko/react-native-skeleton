@@ -10,6 +10,7 @@ exports[`App.render Markup is rendered correctly 1`] = `
       "justifyContent": "center",
     }
   }
+  testID="app"
 >
   <Text
     accessible={true}

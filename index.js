@@ -1,3 +1,5 @@
-import init from "./src";
+// @flow
+
+import init from './src';
 
 init();

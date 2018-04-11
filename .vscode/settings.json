@@ -1,0 +1,26 @@
+{
+  "cucumberautocomplete.steps": [
+    "test/features/step_definitions/*.js",
+    "node_modules/qa-lib/src/step_definitions/*.js"
+  ],
+  "cucumberautocomplete.syncfeatures": "test/features/*feature",
+  "cucumberautocomplete.strictGherkinCompletion": true,
+  "cucumberautocomplete.smartSnippets": true,
+  "cucumberautocomplete.stepsInvariants": true,
+  "cucumberautocomplete.customParameters": [
+    {
+      "parameter": "{ab}",
+      "value": "(a|b)"
+    }
+  ],
+  "cucumberautocomplete.pages": {
+    "users": "test/features/page_objects/users.storage.js",
+    "pathes": "test/features/page_objects/pathes.storage.js",
+    "main": "test/features/support/page_objects/main.page.js"
+  },
+  "editor.quickSuggestions": {
+    "comments": false,
+    "strings": true,
+    "other": true
+  }
+}
