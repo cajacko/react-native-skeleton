@@ -51,6 +51,7 @@ my-release-key.keystore
 
 # Google Services (e.g. APIs or Firebase)
 google-services.json
+google-service-account-key.json
 
 # Freeline
 freeline.py

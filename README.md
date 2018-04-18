@@ -3,11 +3,10 @@
 # Android Setup
 
 * Setup new app on Google Play Console
-*
-*
-* Upload first build
+* Manually sign the app an upload first build
+* Setup fastlane
 
-## Generate a private signing key using keytool
+## Manually sign the app an upload first build
 
 See: https://facebook.github.io/react-native/docs/signed-apk-android.html
 
@@ -58,3 +57,14 @@ MYAPP_RELEASE_KEY_PASSWORD=*****
   * Added `-x lintVitalRelease` to this command is the linting was failing for some reason
 * APK built to: ~/android/app/build/outputs/apk/release/app-release.apk
 * Upload to Google Play Console, under App Releases/Internal test
+
+## Setup fastlane
+
+https://docs.fastlane.tools/getting-started/android/setup/#setting-up-supply
+
+* Create a service account on Google Developers Console, and link with Google Play Console
+  * https://docs.fastlane.tools/getting-started/android/setup/#setting-up-supply
+* Save the json key to `~/android/google-service-account-key.json`
+* `fastlane supply init`
+  * Service acount json file is: google-service-account-key.json
+  * Package name is the one fonud in the Google Play Console, when you click on "All Applications" and you see the name underneath the app title. Will be something like com.reactnativeskeleton
