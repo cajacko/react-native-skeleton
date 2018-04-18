@@ -1,6 +1,11 @@
 
 language: objective-c
 osx_image: xcode9.3
+jdk: oraclejdk8java 
+
+env:
+  global:
+    - ANDROID_HOME=/usr/local/android-sdk-23.0.1
 
 branches:
   only:
