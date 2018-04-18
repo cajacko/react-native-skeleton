@@ -68,3 +68,8 @@ https://docs.fastlane.tools/getting-started/android/setup/#setting-up-supply
 * `fastlane supply init`
   * Service acount json file is: google-service-account-key.json
   * Package name is the one fonud in the Google Play Console, when you click on "All Applications" and you see the name underneath the app title. Will be something like com.reactnativeskeleton
+
+Follow the rest of the setup for "Set up environment variables" and "Use a Gemfile"
+
+From now only when using fastlane use via: `bundle exec fastlane [lane]`
+On CI first step should be `[sudo] bundle install`
