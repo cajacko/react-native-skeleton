@@ -17,7 +17,9 @@
     "test:featuresrelease": "./node_modules/.bin/cucumber-js",
     "test:jsdoc": "jsdoc src -r -d docs -c jsdoc.json",
     "precommit": "lint-staged",
-    "postinstall": "detox clean-framework-cache && detox build-framework-cache"
+    "postinstall": "detox clean-framework-cache && detox build-framework-cache",
+    "release:android":
+      "cd android && ./gradlew assembleRelease -x lintVitalRelease"
   },
   "detox": {
     "configurations": {
