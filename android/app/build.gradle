@@ -108,6 +108,8 @@ android {
         }
     }
 
+    lintOptions { checkReleaseBuilds false }
+
     signingConfigs {
         release {
             if (project.hasProperty('MYAPP_RELEASE_STORE_FILE')) {

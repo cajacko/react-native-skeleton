@@ -5,6 +5,7 @@
 * Setup new app on Google Play Console
 * Manually sign the app an upload first build
 * Setup fastlane
+* Build with `yarn release:android`
 
 ## Manually sign the app an upload first build
 
