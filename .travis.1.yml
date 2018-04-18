@@ -1,4 +1,6 @@
-language: android
+
+language: objective-c
+osx_image: xcode9.3
 
 branches:
   only:
@@ -9,12 +11,14 @@ cache:
     - $HOME/.cache/yarn
     - node_modules
 
-install: #1.2
+install:
+# - brew tap wix/brew
+# - brew install applesimutils
 - curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.2/install.sh | bash
 - export NVM_DIR="$HOME/.nvm" && [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
 - nvm install
 - nvm use
-- npm install
+# - npm install -g detox-cli
 - npm install -g yarn
 - yarn
 - cd android && bundle install
@@ -28,5 +32,11 @@ android: #1.3
   - extra-google-m2repository
   - addon-google_apis-google-16
 
-script: 
+script:
+# - yarn test:lint
+# - yarn test:jsdoc
+# - yarn test:flow
+# - yarn test:jest
+# - detox build --configuration ios.sim.release
+# - yarn test:featuresrelease
 - yarn release:android:testers
