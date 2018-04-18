@@ -6,6 +6,7 @@
 * Manually sign the app an upload first build
 * Setup fastlane
 * Build with `yarn release:android`
+  * Note, the versionCode and versionName in ~/android/app/build.gradle needs to be different from whats in Google Play Console
 
 ## Manually sign the app an upload first build
 
