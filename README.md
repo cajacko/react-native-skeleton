@@ -1,5 +1,11 @@
 # React Native Skeleton
 
+# Travis Setup
+
+Env vars to set:
+
+\*
+
 # Android Setup
 
 * Setup new app on Google Play Console
