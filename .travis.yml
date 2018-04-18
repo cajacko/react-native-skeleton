@@ -10,8 +10,6 @@ cache:
     - node_modules
 
 install: #1.2
-- curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.2/install.sh | bash
-- export NVM_DIR="$HOME/.nvm" && [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
 - nvm install v8.11.0
 - nvm use
 - npm install
