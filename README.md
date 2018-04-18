@@ -5,8 +5,12 @@
 * Setup new app on Google Play Console
 * Manually sign the app an upload first build
 * Setup fastlane
-* Build with `yarn release:android`
+* Create an account with https://deploygate.com
+* Copy `~/android/.env.default` to `~/android/.env` and change values accordingly
+* Publish to Testers via DeployGate with `yarn release:android:testers`
+* Publish to Google Play with `yarn release:android`
   * Note, the versionCode and versionName in ~/android/app/build.gradle needs to be different from whats in Google Play Console
+*
 
 ## Manually sign the app an upload first build
 

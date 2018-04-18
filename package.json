@@ -18,7 +18,9 @@
     "test:jsdoc": "jsdoc src -r -d docs -c jsdoc.json",
     "precommit": "lint-staged",
     "postinstall": "detox clean-framework-cache && detox build-framework-cache",
-    "release:android": "cd android && bundle exec fastlane playstore"
+    "release:android": "cd android && bundle exec fastlane playstore",
+    "release:android:testers":
+      "cd android && bundle exec fastlane deployToTesters"
   },
   "detox": {
     "configurations": {

@@ -1,7 +1,21 @@
-lane :playstore do
+lane :build do
   gradle(task: 'clean')
   gradle(
     task: 'assembleRelease'
   )
+end
+
+lane :deploy do
+  build
   supply(track: "alpha", apk: "app/build/outputs/apk/release/app-release.apk")
+end
+
+lane :deployToTesters do
+  build
+  deploygate(
+    api_token: ENV['DEPLOYGATE_API_TOKEN'],
+    user: ENV['DEPLOYGATE_USER'],
+    apk: "app/build/outputs/apk/release/app-release.apk",
+    message: "Build #{lane_context[SharedValues::BUILD_NUMBER]}"
+  )
 end
