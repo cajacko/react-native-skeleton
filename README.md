@@ -65,7 +65,7 @@ https://docs.fastlane.tools/getting-started/android/setup/#setting-up-supply
 * Create a service account on Google Developers Console, and link with Google Play Console
   * https://docs.fastlane.tools/getting-started/android/setup/#setting-up-supply
 * Save the json key to `~/android/google-service-account-key.json`
-* `fastlane supply init`
+* `fastlane init`
   * Service acount json file is: google-service-account-key.json
   * Package name is the one fonud in the Google Play Console, when you click on "All Applications" and you see the name underneath the app title. Will be something like com.reactnativeskeleton
 
