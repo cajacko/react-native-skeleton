@@ -21,6 +21,7 @@ install:
 - npm install -g detox-cli
 - npm install -g yarn
 - yarn
+- cd android && bundle install
 
 script:
 # - yarn test:lint
