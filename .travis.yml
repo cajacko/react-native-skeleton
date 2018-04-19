@@ -9,6 +9,11 @@ cache:
     - $HOME/.cache/yarn
     - node_modules
 
+licenses:
+  - 'android-sdk-preview-license-.+'
+  - 'android-sdk-license-.+'
+  - 'google-gdk-license-.+'
+
 install: #1.2
 - nvm install v8.11.0
 - nvm use
