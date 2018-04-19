@@ -24,6 +24,7 @@ matrix:
       install:
         - brew tap wix/brew
         - brew install applesimutils
+        - yarn global add detox-cli
       script:
         - yarn test:lint
         - yarn test:jsdoc
