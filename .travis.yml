@@ -18,6 +18,18 @@ before_install:
 
 matrix:
   include:
+    - language: objective-c
+      osx_image: xcode9.3
+      install:
+        - brew tap wix/brew
+        - brew install applesimutils
+      script:
+        - yarn test:lint
+        - yarn test:jsdoc
+        - yarn test:flow
+        - yarn test:jest
+        - detox build --configuration ios.sim.release
+        - yarn test:featuresrelease
     - language: android
       jdk: oraclejdk8
       cache:
