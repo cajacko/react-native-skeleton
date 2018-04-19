@@ -24,7 +24,7 @@
       "cd android && bundle exec fastlane deployToTesters",
     "archivecredentials":
       "tar -czf credentials.tar.gz android/.env android/gradle.properties android/google-service-account-key.json android/app/my-release-key.keystore",
-    "extractcredentials": "tar -xvf --overwrite",
+    "extractcredentials": "tar -xvf credentials.tar.gz",
     "addcredentialstotravis": "travis encrypt-file credentials.tar.gz --add"
   },
   "detox": {
