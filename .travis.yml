@@ -18,7 +18,8 @@ before_install:
 
 matrix:
   include:
-    - language: objective-c
+    - stage: test
+      language: objective-c
       osx_image: xcode9.3
       install:
         - brew tap wix/brew
@@ -30,7 +31,8 @@ matrix:
         - yarn test:jest
         - detox build --configuration ios.sim.release
         - yarn test:featuresrelease
-    - language: android
+    - stage: deploy
+      language: android
       jdk: oraclejdk8
       cache:
         directories:
