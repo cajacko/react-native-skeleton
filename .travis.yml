@@ -10,7 +10,6 @@ jdk:
 cache:
   directories:
     - $HOME/.cache/yarn
-    - node_modules
     - $HOME/.gradle/caches/2.8
     - $HOME/.gradle/caches/jars-1
     - $HOME/.gradle/daemon
