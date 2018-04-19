@@ -1,10 +1,6 @@
 # React Native Skeleton
 
-# Travis Setup
-
-Env vars to set:
-
-\*
+[![Build Status](https://travis-ci.org/cajacko/react-native-skeleton.svg?branch=master)](https://travis-ci.org/cajacko/react-native-skeleton)
 
 # Android Setup
 
