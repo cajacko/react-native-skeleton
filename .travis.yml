@@ -11,6 +11,11 @@ cache:
   directories:
     - $HOME/.cache/yarn
     - node_modules
+    - $HOME/.gradle/caches/2.8
+    - $HOME/.gradle/caches/jars-1
+    - $HOME/.gradle/daemon
+    - $HOME/.gradle/native
+    - $HOME/.gradle/wrapper
 
 install: #1.2
 - nvm install v8.11.0
@@ -18,6 +23,7 @@ install: #1.2
 - npm install
 - npm install -g yarn
 - yarn
+- yes | sdkmanager --licenses
 - cd android && bundle install
 
 android: #1.3
