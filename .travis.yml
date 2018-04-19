@@ -23,7 +23,7 @@ install: #1.2
 - npm install
 - npm install -g yarn
 - yarn
-- cd $ANDROID_HOME && tools/bin/sdkmanager --licenses
+- yes | $ANDROID_HOME/tools/bin/sdkmanager "build-tools;23.0.1"
 - cd android && bundle install
 
 android: #1.3
