@@ -20,3 +20,5 @@ coverage
 /docs
 tmp
 .env
+
+credentials.tar.gz
