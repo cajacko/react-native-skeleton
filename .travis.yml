@@ -23,7 +23,7 @@ install: #1.2
 - npm install
 - npm install -g yarn
 - yarn
-- yes | sdkmanager --licenses
+- tools/bin/sdkmanager --licenses
 - cd android && bundle install
 
 android: #1.3
